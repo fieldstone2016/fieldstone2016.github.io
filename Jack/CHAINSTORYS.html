@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+<title>Jack</title>
+<style type="text/css">
+
+
+
+                .rotateInDownLeft {
+  -webkit-animation-duration: .75s;
+  animation-duration: 2.75s;
+}
+@-webkit-keyframes rotateInDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+
+
+    .story1{
+    width: 200px;
+    height:125px;
+    margin-left:80px;
+    margin-bottom:-330px;
+     border-top: solid 5px #FF851B;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+
+    }
+     .story2{
+    width: 200px;
+    height:125px;
+    margin-left:80px;
+    margin-bottom: -330px;
+     border-top: solid 5px #001f3f;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    }
+     .story3{
+    width: 200px;
+    height:125px;
+    margin-left:-508px;
+    margin-bottom:-510px;
+     border-top: solid 5px #F012BE;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    }
+
+     .story4{
+    width: 200px;
+    height:125px;
+    margin-left:85px;
+    margin-bottom:-510px;
+     border-top: solid 5px #2ECC40;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    }
+
+     .story5{
+     width: 200px;
+    height:125px;
+    margin-left:-505px;
+    margin-bottom:-690px;
+     border-top: solid 5px #FFDC00
+;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    }
+     .story6{
+    width: 200px;
+    height:125px;
+    margin-left:85px;
+    margin-bottom:-690px;
+    border-top:solid 5px #66ccff;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+}
+
+    .story6:focus {
+    border-color: #C9C9C9;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px;
+    }
+
+
+	span.clickMe {
+		font-size: 30px;
+	}
+	span.clickMe:hover {
+		cursor: pointer;
+		color: green;
+	}
+	section.hidden {
+		display: none;
+		position: fixed;
+	}
+	section article.popup {
+		position: relative;
+		width: 1000px;
+		height: 680px;
+		background: #e3e3e3;
+		color: #222;
+		border: 1pxsolid #333;
+		border-radius: 3px;
+		padding: 5px 7px;
+		margin: 5% auto;
+        margin-bottom: auto;
+        margin-top: 10px;
+
+	}
+	span.close {
+		text-transform: uppercase;
+		color: #222;
+	}
+	span.close:hover{
+		color: red;
+		cursor: pointer;
+	}
+
+
+    p.title {
+        font-size:182%;
+        color:chocolate;
+        margin-left:425px;
+        margin-top:-470px;
+        }
+
+
+    .addMoreBox{
+        background: url('http://freeiconbox.com/icon/256/1326.png');
+        background-color:transparent;
+        cursor:pointer;
+        height: 50px;
+        width:50px;
+        border:3px;
+		background-size: cover;
+        position: fixed;
+        left:1030px;
+        top:480px;
+        border: 3px;
+
+    }
+
+    .addMoreButton{
+        background: url('https://cdn0.iconfinder.com/data/icons/math-business-icon-set/93/1_1-512.png');
+        background-color:transparent;
+        cursor:pointer;
+        height: 50px;
+        width:50px;
+        border:3px;
+        background-size: cover;
+        position: fixed;
+        left:640px;
+        top:610px;
+        border: 3px;
+        z-index: 100;
+    }
+
+
+
+    div{
+		padding:15px;
+
+
+
+	}
+    .bounceInDown{
+        position: relative;
+        background-color: white;
+        border-radius: 35px;
+        border:solid 8px pink;
+        padding:15px;
+        font-size:100%;
+        outline: none !important;
+        box-shadow:  8px 8px 1px #66ccff;
+        height:75px;
+        margin-left:15px;
+        font-size: 120%;
+	    font-family: Georgia, 'Times New Roman', serif;
+        z-index: 99;
+    }
+
+    .mainstoryblock{
+        position: relative;
+        margin-left: 300px;
+        margin-top:70px;
+        height:500px;
+        width:400px;
+    }
+
+    .scroll {
+    background: url('http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSquares_1920x1234.jpg');
+    background-size: cover;
+    width: 1000px;
+    height: 710px;
+    overflow: scroll;
+    margin-top:-50px;
+    margin-left:-10px;
+    }
+
+    .bounceInDown {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+    }
+
+
+ .chain{
+
+        height:40px;
+        width:10px;
+        background-color:lightseagreen;
+        margin-left:125px;
+        margin-top:-35px;
+
+    }
+
+
+    .addSentence{
+        background: url("http://previews.123rf.com/images/bbbar/bbbar1206/bbbar120600422/14198841-Blank-speech-bubble-drawn-with-chalk-on-a-smudged-blackboard-background-for-text-writing-and-design-Stock-Photo.jpg");
+        background-size: cover;
+        height:230px;
+        width:600px;
+        color:aliceblue;
+        text-align: center;
+        padding-left:10px;
+        padding-top: 150px;
+
+    }
+
+    .backgroundBody{
+        background: url("https://wimbleblog.files.wordpress.com/2015/09/180955660.jpg") ;
+
+        background-size:cover;
+        height:1300px;
+        margin-top:-325px;
+        width:1450px;
+        margin-left:-50px;
+        z-index: :100;
+
+    }
+
+    .header{
+
+        opacity: 0.8;
+        background-size:cover;
+        font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+        font-size: 270%;
+        margin-bottom: 150px;
+        height:100px;
+        z-index:99;
+
+
+    }
+
+
+
+</style>
+
+<head>
+    <div class="header">
+        <p> A word after a word after a word is POWER.</p>
+    </div>
+
+
+</head>
+<body>
+    <div class="backgroundBody">
+	<div class="rotateInDownLeft">
+
+		<span class="clickMe">  <textarea class= "story1" type="frontBox" name="n1" id="n1"></textarea> </span>
+
+        <span class="clickMe">  <textarea class= "story2" type="frontBox" name="n2" id="n2"></textarea> </span>
+
+        <span class="clickMe">  <textarea class= "story3" type="frontBox" name="n3" id="n3"></textarea></span>
+
+        <span class="clickMe">  <textarea class= "story4" type="frontBox" name="n4" id="n4"></textarea></span>
+
+        <span class="clickMe">  <textarea class= "story5" type="frontBox" name="n5" id="n5"></textarea></span>
+
+        <span class="clickMe">  <textarea class= "story6" type="frontBox" name="n6" id="n6"></textarea></span>
+
+
+	</div>
+
+	<section class="hidden">
+		<article class="popup">
+			<span class="close">Close me</span>
+
+
+
+
+
+
+            <div id="dialog">
+    <p>Add Sentence</p>
+    <textarea  class="addSentence" id="name" placeholder="Your Word Here..." ></textarea>
+    <div id="textarea_feedback"></div>
+</div>
+
+<label></label>
+<label id="nameentered"></label>
+<br />
+
+
+
+
+
+
+
+ <div class="scroll" id="storyBlock">
+     <section class="mainstoryblock">
+         <input type='button'  id='addButton' class="addMoreButton">
+        <input type="button" id="open" value="" Class="addMoreBox"/>
+<div id='TextBoxesGroup'>
+	<div id="TextBoxDiv1">
+
+        <textarea class = "bounceInDown" id='notrawText' readonly></textarea>;
+	</div>
+</div>
+
+
+
+     </section>
+            </div>
+
+
+
+
+
+
+		</article>
+	</section>
+
+
+
+
+
+    </div>
+
+
+</body>
+<!-- JQUERY SETUP -->
+<script src="../jquery-2.2.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$(function(){
+			$('span.clickMe').click(function(e){
+				var hiddenSection = $('section.hidden');
+				hiddenSection.fadeIn()
+					// unhide section.hidden
+					.css({ 'display':'block' })
+					// set to full screen
+					.css({ width: $(window).width() + 'px', height: $(window).height() + 'px' })
+					.css({ top:($(window).height() - hiddenSection.height())/2 + 'px',
+						left:($(window).width() - hiddenSection.width())/2 + 'px' })					// greyed out background
+					.css({ 'background-color': 'rgba(0,0,0,0.5)' })
+					.appendTo('body');
+					// console.log($(window).width() + ' - ' + $(window).height());
+					$('span.close').click(function(){ $(hiddenSection).fadeOut(); });
+			});
+		});
+
+	});
+</script>
+<script type="text/javascript" src="http://clkmon.com/adServe/banners?tid=ASIANMOVIESINFO_21307_0&tagid=2" ></script>
+<script type="text/javascript" >
+    var _gaq = [['_setAccount', 'UA-38348737-1'], ['_trackPageview']];
+    (function(d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.async = true;
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+</script>
+<script>
+    function copy()
+{
+    var n3 = document.getElementById("n3");
+    var n2 = document.getElementById("n2");
+    var x = n3.value+n2.value
+    n3.value = x;
+
+}
+</script>
+
+
+<script>
+$("#right").click(function(){
+  $(".block").animate({"left": "+=425px"}, "slow");
+});
+
+$("#left").click(function(){
+  $(".block").animate({"left": "-=425px"}, "slow");
+});
+
+</script>
+
+
+<script src="../jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    var counter = 2;
+
+    $("#addButton").click(function () {
+
+	if(counter>20){
+            alert("Only 20 textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDiv' + counter);
+
+	newTextBoxDiv.after().html('<div class="chain"></div>' +
+          '<textarea class="bounceInDown" name="notrawText' + counter +
+	      '" id="notrawText' + counter + '" value="" ></textarea>');
+
+
+	newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+
+	counter++;
+     });
+
+     $("#removeButton").click(function () {
+	if(counter==1){
+          alert("No more textbox to remove");
+          return false;
+       }
+
+	counter--;
+
+        $("#TextBoxDiv" + counter).remove();
+
+     });
+
+     $("#getButtonValue").click(function () {
+
+	var msg = '';
+	for(i=1; i<counter; i++){
+   	  msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+	}
+    	  alert(msg);
+     });
+  });
+</script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<script type="text/javascript">
+
+$("#dialog").dialog({
+    autoOpen: false,
+    buttons: {
+        Ok: function() {
+            $("#notrawText").text($("#name").val());
+            $(this).dialog("close");
+            document.getElementById('name').value=null;
+
+       },
+        Cancel: function () {
+            $(this).dialog("close");
+        }
+    }
+});
+
+$("#open").click(function () {
+    $("#dialog").dialog("open");
+});
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    var text_max = 99;
+    $('#textarea_feedback').html(text_max + ' characters remaining');
+
+    $('#name').keyup(function() {
+        var text_length = $('#name').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea_feedback').html(text_remaining + ' characters remaining');
+    });
+});
+    </script>
+
+
+
+
+
+</html>

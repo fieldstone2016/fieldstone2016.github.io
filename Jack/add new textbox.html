@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>jQuery add / remove textbox example</title>
+ 
+<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+
+<style type="text/css">
+	div{
+		padding:1px;
+        
+       
+    
+	}
+    .bounceInDown{
+        
+         -moz-border-radius: 15px;
+    
+    border-radius: 15px;
+    border:solid 1px black;
+        padding:5px;
+        font-size:180%;
+         outline: none !important;
+    box-shadow:  8px 8px 5px #66ccff;
+        
+    }
+    .bounceInDown {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+    }
+    
+    
+    .chain{
+        
+        color:red;
+    }
+
+    .chain{
+        
+    width:20px;
+	height:100px;
+	background: pink;
+    margin-left:125px    
+    }
+    
+    
+    
+    
+</style>
+
+</head>
+
+<body>
+
+<h1>jQuery add / remove textbox example</h1>
+
+<script src="../jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    var counter = 2;
+		
+    $("#addButton").click(function () {
+				
+	if(counter>20){
+            alert("Only 20 textboxes allow");
+            return false;
+	}   
+		
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDiv' + counter);
+                
+	newTextBoxDiv.after().html('<div class="chain">Textbox #'+ counter + ' : </div>' +
+          '<textarea class="bounceInDown" name="textbox45646' + counter + 
+	      '" id="textbox' + counter + '" value="" ></textarea>');
+    
+	newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+				
+	counter++;
+     });
+
+     $("#removeButton").click(function () {
+	if(counter==1){
+          alert("No more textbox to remove");
+          return false;
+       }   
+        
+	counter--;
+			
+        $("#TextBoxDiv" + counter).remove();
+			
+     });
+		
+     $("#getButtonValue").click(function () {
+		
+	var msg = '';
+	for(i=1; i<counter; i++){
+   	  msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+	}
+    	  alert(msg);
+     });
+  });
+</script>
+    
+   <script>
+        <script src="../jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+
+    
+    jQuery(document).ready(function($){
+
+var bgColorArray = ['navy','blue','orange','aqua','black','maroon','lime','silver','teal','fuchsia','purple'],
+    selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+$('.textarea').css('background-color', selectBG);
+
+
+});
+    </script>
+    
+    <script>
+        var height = 0;
+$('.bounceInDown').each(function(i, value){
+    height += parseInt($(this).height());
+});
+
+height += '';
+
+$('.bounceInDown').animate({scrollTop: height});
+    </script>>
+    
+    
+</head><body>
+
+<div id='TextBoxesGroup'>
+	<div id="TextBoxDiv1">
+		<div class="chain">Textbox #1 : </div><textarea class = "bounceInDown" id='textbox11'></textarea>;
+	</div>
+</div>
+<input type='button' value='Add Button' id='addButton'>
+<input type='button' value='Remove Button' id='removeButton'>
+<input type='button' value='Get TextBox Value' id='getButtonValue'>
+
+</body>
+</html>
