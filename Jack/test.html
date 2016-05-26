@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style type="text/css">
+			.fun {
+				background-color: aqua;
+			}
+			.blue {
+				color: blue;
+			}
+			.button {
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="button1" class="button blue">Click!</button>
+		<p id="p1" class="fun blue">Hello!</p>
+
+		<script>
+			var button1 = document.getElementById('button1');
+			var p1 = document.getElementById('p1');
+
+			function awesome(event) {
+				console.log('hello');
+				console.log(event);
+				console.log(this);
+				this.innerHTML = 'boo!';
+//				this.parentElement.style.backgroundColor = 'black';
+				p1.innerHTML = 'Test!';
+			}
+
+
+			button1.onclick = awesome;
+
+			console.log(this);
+		</script>
+	</body>
+</html>
