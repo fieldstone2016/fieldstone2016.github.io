@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<title>Hello World!</title>
+
+<style type="text/css">
+	h1,h2{
+		color:blue;
+		background-color:yellow;
+		border: 1px solid black;
+		width: 300px;
+		overflow-x: hidden;
+	}
+	h2{
+		background-color: green;
+	}
+	h3{
+		border: 10px dashed pink;
+		transition: color is;
+	}
+	h3:hover{
+		border: 10px solid pink;
+		color:red;
+	}
+	h4{
+		background: linear-gradient(to right, red, yellow);
+	}
+	h5{
+		height: 800px;
+		background: url(http://i0.hdslb.com/bfs/archive/d89fdccc1249e8cc559481e3292fbeb0a6799a35.jpg_320x200.jpg);
+/*		background-repeat: no-repeat;*/
+		background-size: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+	}
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<h1>This is a header!</h1>
+<h2>header 2</h2>
+<h3>header 3</h3>
+<h4>header 4</h4>
+<h5>header 5</h5>
+<h6>header 6</h6>
+
+
+
+<p>This is my very first website</p>
+
+<p>This text happens on a few lines</p>
+
+
+<p>
+A really                 big space
+</p>
+
+
+<p></p>
+
+<script>
+	// This is all javascipt!!!
+	var x=5;
+	x=x+2;
+
+	alert('Hello');
+	console.log(x);
+</script>
+
+
+<div class="盒子box" style="position: relative; background-color: rgba(0, 0, 0, 0.2);">
+
+                <img data-imagever="3.4" style="width:25%;cursor:pointer;" src="http://data.bilibilijj.com/shinji/300X154.png" onclick="window.open('http://bleach.bilibilijj.com/');">
+            </div>
+
+    <button id="LearnMoreBtn">Learn More</a>
+<div id="overlay"></div>
+<div id="popup">
+  Popup contents here
+</div>
+
+type='text/javascript'></script>
+<style>
+#fanback {
+display:none;
+background:rgba(0,0,0,0.8);
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+z-index:99999;
+}
+#fan-exit {
+width:100%;
+height:100%;
+}
+#JasperRoberts {
+background:white;
+width:420px;
+height:270px;
+position:absolute;
+top:58%;
+left:63%;
+margin:-220px 0 0 -375px;
+-webkit-box-shadow: inset 0 0 50px 0 #939393;
+-moz-box-shadow: inset 0 0 50px 0 #939393;
+box-shadow: inset 0 0 50px 0 #939393;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin: -220px 0 0 -375px;
+}
+#TheBlogWidgets {
+float:right;
+cursor:pointer;
+background:url(http://3.bp.blogspot.com/-NRmqfyLwBHY/T4nwHOrPSzI/AAAAAAAAAdQ/8b9O7O1q3c8/s1600/TheBlogWidgets.png) repeat;
+height:15px;
+padding:20px;
+position:relative;
+padding-right:40px;
+margin-top:-20px;
+margin-right:-22px;
+}
+.remove-borda {
+height:1px;
+width:366px;
+margin:0 auto;
+background:#F3F3F3;
+margin-top:16px;
+position:relative;
+margin-left:20px;
+}
+#linkit,#linkit a.visited,#linkit a,#linkit a:hover {
+color:#80808B;
+font-size:10px;
+margin: 0 auto 5px auto;
+float:center;
+}
+</style>
+
+
+<script type='text/javascript'>
+//jQuery.cookie = function (key, value, options) {
+
+// key and at least value given, set cookie...
+if (arguments.length > 1 && String(value) !== "[object Object]") {
+options = jQuery.extend({}, options);
+
+if (value === null || value === undefined) {
+options.expires = -1;
+}
+
+if (typeof options.expires === 'number') {
+var days = options.expires, t = options.expires = new Date();
+t.setDate(t.getDate() + days);
+}
+
+value = String(value);
+
+return (document.cookie = [
+encodeURIComponent(key), '=',
+options.raw ? value : encodeURIComponent(value),
+options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+options.path ? '; path=' + options.path : '',
+options.domain ? '; domain=' + options.domain : '',
+options.secure ? '; secure' : ''
+].join(''));
+}
+
+// key and possibly options given, get cookie...
+options = value || {};
+var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+};
+//]]>
+</script>
+<script type='text/javascript'>
+jQuery(document).ready(function($){
+if($.cookie('popup_user_login') != 'yes'){
+$('#fanback').delay(5000).fadeIn('medium');
+$('#TheBlogWidgets, #fan-exit').click(function(){
+$('#fanback').stop().fadeOut('medium');
+});
+}
+
+});
+</script>
+
+<iframe allowtransparency='true' frameborder='0' scrolling='no' src='//www.facebook.com/plugins/likebox.php? href=https://www.facebook.com/ShkarkoMuzikShqip&width=402&height=255&colorscheme=light&show_faces=true&show_border=false&stream=false&header=false' style='border: none; overflow: hidden; margin-top: -19px; width: 402px; height: 230px;'></iframe>
+</div>
+
+</body>
+
+
+
+</html>
