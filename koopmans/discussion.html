@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Discussion board</title>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<h1>ICS4U CCT Discussion</h1>
+		<textarea id="discussion" readonly="true" rows="10" cols="50"></textarea>
+		<input id="message" type="text" placeholder="Enter a message..." />
+
+		<script src="fileIO.js"></script>
+		<script src="jquery-2.2.0.min.js"></script>
+		<script>
+			// Get links to our two important HTML DOM elements
+			var discussionDOM = document.getElementById('discussion');
+			var messageDOM = document.getElementById('message');
+
+			// Track all posts to the message board
+			var discussion = [];
+
+			function addMessage(event) {
+				// Function to add a user's message when they press Enter
+
+				// Get the key character code and check if it's Enter ('13')
+				var charCode = event.which || event.keyCode;
+				if (charCode == '13') {
+					// Add the message to the list of posts and clear the box
+					discussion.push(event.target.value);
+					event.target.value = '';
+
+					// Update the post database (refresh the discussion box when the database is updated)
+					writeFile('discussionPosts.txt', discussion, getMessages);
+				}
+			}
+			function getMessages(data) {
+				readFile('discussionPosts.txt', updateDiscussion);
+			}
+			function updateDiscussion(data) {
+				discussion = data;
+				var temp = '';
+				for (var i=0; i<data.length; i++) {
+					temp += discussion[i] + '\n';
+				}
+				discussionDOM.value = temp;
+			}
+
+			messageDOM.addEventListener('keyup', addMessage, false);
+			window.onload = getMessages;
+			window.setTimeout(getMessages, 10000);
+		</script>
+	</body>
+</html>
