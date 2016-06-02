@@ -10,6 +10,7 @@
 		<h1>ICS4U CCT Discussion</h1>
 		<textarea id="discussion" readonly="true" rows="10" cols="50"></textarea>
 		<input id="message" type="text" placeholder="Enter a message..." />
+		<button id="clear">Clear discussion</button>
 
 		<script src="fileIO.js"></script>
 		<script src="jquery-2.2.0.min.js"></script>
@@ -17,6 +18,7 @@
 			// Get links to our two important HTML DOM elements
 			var discussionDOM = document.getElementById('discussion');
 			var messageDOM = document.getElementById('message');
+			var clearDOM = document.getElementById('clear');
 
 			// Track all posts to the message board
 			var discussion = [];
@@ -39,17 +41,22 @@
 				readFile('discussionPosts.txt', updateDiscussion);
 			}
 			function updateDiscussion(data) {
-				discussion = data;
+				discussion = (data ? data : []);
 				var temp = '';
-				for (var i=0; i<data.length; i++) {
+				for (var i=0; i<discussion.length; i++) {
 					temp += discussion[i] + '\n';
 				}
 				discussionDOM.value = temp;
 			}
+			function clearDiscussion(event) {
+				discussion = [];
+				writeFile('discussionPosts.txt', discussion, getMessages);
+			}
 
 			messageDOM.addEventListener('keyup', addMessage, false);
+			clearDOM.addEventListener('click', clearDiscussion, false);
 			window.onload = getMessages;
-			window.setTimeout(getMessages, 10000);
+			window.setInterval(getMessages, 2000);
 		</script>
 	</body>
 </html>

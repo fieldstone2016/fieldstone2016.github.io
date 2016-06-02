@@ -11,6 +11,10 @@ if ($password != 'ICS4U')		die('Invalid password.');
 // Gather necessary info
 $filename = $_POST['filename']	or die('No filename specified.');
 
+// Get the file's current state, then wait for the file to be changed
+$initialTime = filemtime($filename);
+while (filemtime($filename)==$initialTime)	sleep(1);
+
 // Return the file contents
 // $data = json_decode(file_get_contents($filename),TRUE)	or die('Read failed.');
 $data = file_get_contents($filename)	or die('Read failed.');

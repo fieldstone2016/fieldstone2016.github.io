@@ -20,6 +20,15 @@ function readFile(filename, callback) {
 	$.post(url, info).then( parseJSON.bind(this,callback) );
 }
 
+function listenFile(filename, callback) {
+	// Gather info
+	var url = 'http://www.erik-koopmans.com/fieldstone2016/listenFile.php';
+	var info = {filename: filename, password: fileIO_password};
+
+	// Call the PHP script to read the file
+	$.post(url, info).then( parseJSON.bind(this,callback) );
+}
+
 function parseJSON(callback, data) {
 	// Parse the returned JSON data if possible
 	try			{data = JSON.parse(data);}
